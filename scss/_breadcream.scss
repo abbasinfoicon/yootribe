@@ -1,0 +1,42 @@
+//==== breadcream start ====//
+.breadcream {
+    position: relative;
+    margin-bottom: 55px;
+
+    @include mq(max, 1366px) {
+        margin-bottom: 30px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        li {
+            list-style: none;
+            font-size: 14px;
+            font-family: "Poppins", sans-serif;
+            font-weight: normal;
+            color: $turquoise;
+            letter-spacing: 0.5px;
+
+            a {
+                font-size: inherit;
+                color: $white;
+
+                &:hover {
+                    color: $white;
+                }
+
+                img {
+                    position: relative;
+                    padding-right: 7px;
+                    top: -2px;
+                }
+            }
+        }
+    }
+}
+//==== breadcream end ====//

@@ -1,0 +1,80 @@
+//==== Menu start ====//
+nav {
+    position: relative;
+}
+
+// menu
+.menu {
+    position: relative;
+    padding: 0;
+
+    .navbar {
+        &-toggler {
+            position: relative;
+
+            span {
+                color: $main;
+            }
+        }
+
+        &-collapse {
+            justify-content: space-between;
+            align-items: center;
+
+            ul {
+                font-size: 0;
+
+                @include mq(min, 1440px) {
+                    padding-left: 17.4%;
+                }
+
+                li {
+                    list-style: none;
+
+                    a {
+                        font-size: 25px;
+                        color: $main;
+                        display: block;
+                        padding: 0 15px;
+
+                        @include mq(min, 1366px) {
+                            padding: 0 44px;
+                        }
+
+                        &.active,
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+
+                &.navbar-right {
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        font-size: 16px;
+                        font-family: Arial, sans-serif;
+                        font-weight: normal;
+                        color: $white;
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: $white;
+                            padding: 0;
+                            padding-left: 5px;
+
+                            &:hover {
+                                color: $main;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//==== Menu end ====//

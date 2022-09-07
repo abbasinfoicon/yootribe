@@ -11,25 +11,28 @@
 
 //@include full-width;
 
+// flex-center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 //Images-center
 @mixin img-center($position) {
   position: absolute;
 
-  @if $position =='vertical' {
+  @if $position == "vertical" {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
-
-  @else if $position =='horizontal' {
+  } @else if $position == "horizontal" {
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translate(-50%);
-  }
-
-  @else if $position =='both' {
+  } @else if $position == "both" {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -37,7 +40,6 @@
     transform: translate(-50%, -50%);
   }
 }
-
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
   position: $position;
@@ -48,7 +50,6 @@
 }
 
 //@include img-center(both);
-
 
 // box-shadow
 @mixin box-shadow($boxshadow) {
@@ -85,7 +86,7 @@
 
 // gradient-linear
 @mixin gradient-linear($clr, $secclr, $nxtclr, $dirction) {
-  @if $dirction =='vertical' {
+  @if $dirction == "vertical" {
     background: $clr;
     /* Old browsers */
     background: -moz-linear-gradient(top, #{$clr} 0%, #{$secclr} 50%, #{$nxtclr} 100%);
@@ -96,9 +97,7 @@
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$clr}', endColorstr='#{$nxtclr}', GradientType=0);
     /* IE6-9 */
-  }
-
-  @else if $dirction =='horizontal' {
+  } @else if $dirction == "horizontal" {
     background: $clr;
     /* Old browsers */
     background: -moz-linear-gradient(left, #{$clr} 0%, #{$secclr} 50%, #{$nxtclr} 100%);
@@ -115,8 +114,8 @@
 //@include gradient-linear(#f00, #000);
 
 //img-url-extantion
-@mixin imgurl($img, $extension){
-background-image: url('../img/' + $img + '.' + $extension);
+@mixin imgurl($img, $extension) {
+  background-image: url("../img/" + $img + "." + $extension);
 }
 
 //@include imgurl(logo, png, no-repeat, #f00);
@@ -186,37 +185,28 @@ background-image: url('../img/' + $img + '.' + $extension);
 
 // @include scale(2); <- how to use this mixin
 
-
 // campton
-@mixin campton($type) {
-  @if $type =='light300' {
-    font-family: 'Campton-light';
+@mixin poppins($type) {
+  @if $type == "light300" {
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
-  }
-
-  @else if $type =='bold700' {
-    font-family: 'Campton-bold';
+  } @else if $type == "bold700" {
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
-  }
-
-  @else if $type =='black' {
-    font-family: 'Campton-black';
+  } @else if $type == "black" {
+    font-family: 'Poppins', sans-serif;
     font-weight: 900;
-  }
-
-  @else {
-    font-family: 'Campton-light';
+  } @else {
+    font-family: 'Poppins', sans-serif;
   }
 }
 
 //@include campton(light100/.../black900);
 
-@mixin spacing($place, $m-direction, $m-amount:null) {
+@mixin spacing($place, $m-direction, $m-amount: null) {
   @if $m-direction ==all {
     #{$place}: $m-amount;
-  }
-
-  @else {
+  } @else {
     #{$place}-#{$m-direction}: $m-amount;
   }
 }
@@ -255,10 +245,9 @@ background-image: url('../img/' + $img + '.' + $extension);
 
 //clearfix
 @mixin clearfix() {
-
   &:before,
   &:after {
-    content: '';
+    content: "";
     display: table;
   }
 
@@ -273,17 +262,13 @@ background-image: url('../img/' + $img + '.' + $extension);
 @mixin background-gradient($start-color, $end-color, $orientation) {
   background: $start-color;
 
-  @if $orientation =='vertical' {
+  @if $orientation == "vertical" {
     background: -webkit-linear-gradient(top, $start-color, $end-color);
     background: linear-gradient(to bottom, $start-color, $end-color);
-  }
-
-  @else if $orientation =='horizontal' {
+  } @else if $orientation == "horizontal" {
     background: -webkit-linear-gradient(left, $start-color, $end-color);
     background: linear-gradient(to right, $start-color, $end-color);
-  }
-
-  @else {
+  } @else {
     background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
     background: radial-gradient(ellipse at center, $start-color, $end-color);
   }
@@ -313,7 +298,6 @@ background-image: url('../img/' + $img + '.' + $extension);
 
 //scroll-body
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
-
   // For Google Chrome
   ::-webkit-scrollbar {
     width: $size;
@@ -353,12 +337,7 @@ background-image: url('../img/' + $img + '.' + $extension);
 
 //css3-propertisc all browser support
 @mixin css3($property, $value) {
-
-  @each $prefix in -webkit-,
-  -moz-,
-  -ms-,
-  -o-,
-  '' {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
     #{$prefix}#{$property}: $value;
   }
 }
@@ -369,7 +348,6 @@ background-image: url('../img/' + $img + '.' + $extension);
 // http://css-tricks.com/examples/ShapesOfCSS/
 
 @mixin shape($shape, $size, $color) {
-
   @if $shape ==square {
     width: $size;
     height: $size;
@@ -388,7 +366,7 @@ background-image: url('../img/' + $img + '.' + $extension);
     height: 0;
     border-left: $size solid transparent;
     border-right: $size solid transparent;
-    border-bottom: $size*1.5 solid $color;
+    border-bottom: $size * 1.5 solid $color;
   }
 
   @if $shape ==right-triangle {
@@ -407,7 +385,7 @@ background-image: url('../img/' + $img + '.' + $extension);
     top: -$size;
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       left: -$size;
       top: $size;
@@ -421,8 +399,7 @@ background-image: url('../img/' + $img + '.' + $extension);
   @if $shape ==pentagon {
     position: relative;
     width: $size;
-    border-width: (25/27)*$size (
-      1/3)*$size 0;
+    border-width: (25/27) * $size (1/3) * $size 0;
     border-style: solid;
     border-color: $color transparent;
 
@@ -431,18 +408,17 @@ background-image: url('../img/' + $img + '.' + $extension);
       position: absolute;
       height: 0;
       width: 0;
-      top: (-17/11)*$size;
-      left: (-1/3)*$size;
-      border-width: 0 (5/6)*$size (
-        35/54)*$size;
+      top: (-17/11) * $size;
+      left: (-1/3) * $size;
+      border-width: 0 (5/6) * $size (35/54) * $size;
       border-style: solid;
       border-color: transparent transparent $color;
     }
   }
 
   @if $shape ==hexagon {
-    width: $size*2;
-    height: $size*1.1;
+    width: $size * 2;
+    height: $size * 1.1;
     background: $color;
     position: relative;
 
@@ -483,10 +459,10 @@ background-image: url('../img/' + $img + '.' + $extension);
       position: absolute;
       top: 0;
       left: 0;
-      border-bottom: 29/$size solid $color;
-      border-left: 29/$size solid transparent;
-      border-right: 29/$size solid transparent;
-      width: 42/$size;
+      border-bottom: 29 / $size solid $color;
+      border-left: 29 / $size solid transparent;
+      border-right: 29 / $size solid transparent;
+      width: 42 / $size;
       height: 0;
     }
 
@@ -495,10 +471,10 @@ background-image: url('../img/' + $img + '.' + $extension);
       position: absolute;
       bottom: 0;
       left: 0;
-      border-top: 29/$size solid $color;
-      border-left: 29/$size solid transparent;
-      border-right: 29/$size solid transparent;
-      width: 42/$size;
+      border-top: 29 / $size solid $color;
+      border-left: 29 / $size solid transparent;
+      border-right: 29 / $size solid transparent;
+      width: 42 / $size;
       height: 0;
     }
   }
@@ -522,18 +498,15 @@ background-image: url('../img/' + $img + '.' + $extension);
 
 //custom-media query
 @mixin mq($screen, $custom) {
-  @if $screen =='min' {
+  @if $screen == "min" {
     @media (min-width: $custom) {
       @content;
     }
-  }
-
-  @else if $screen =='max' {
+  } @else if $screen == "max" {
     @media (max-width: $custom) {
       @content;
     }
   }
 }
-
 
 //@include mg(min/max, any_size(400));

@@ -1,5 +1,99 @@
-// header start
+//==== header start ====//
 .header {
+    @include full-width;
+    background-color: $turquoise;
+    padding: 33px 0;
 }
 
-// header end
+// top-head
+.top-head {
+    position: relative;
+
+    .logo {
+        margin-bottom: 30px;
+
+        a {
+            display: block;
+
+            img {
+                height: 39px;
+                width: auto;
+            }
+        }
+    }
+}
+
+// user-info
+.user-info {
+    position: relative;
+    margin-bottom: 30px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row;
+
+        li {
+            a {
+                position: relative;
+                color: #666667;
+                margin: 0 15px;
+                @include transition(0.5s);
+                font-size: 24px;
+
+                &.user {
+                    width: 25px;
+                    height: 25px;
+                    @include border-radius(100%);
+                    background-color: $hover;
+                    @include flex-center;
+                    color: $white;
+                    font-size: 16px;
+
+                    &:hover {
+                        color: $hover;
+                        background-color: $white;
+                    }
+
+                    &-name {
+                        font-size: 14px;
+                        color: lighten($black, 26%);
+                        margin: 0;
+
+                        &:hover {
+                            color: lighten($black, 20%);
+                        }
+                    }
+                }
+
+                &:hover {
+                    color: $hover;
+                }
+
+                i {
+                }
+
+                .notification {
+                    @include position(absolute, 0, 0);
+                    top: 1px;
+                    right: -6px;
+                    background: $red;
+                    width: 14px;
+                    height: 14px;
+                    @include flex-center;
+                    font-size: 11px;
+                    font-family: Arial, sans-serif;
+                    font-weight: bold;
+                    @include border-radius(100%);
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@import "./menu";
+//==== header end ====//

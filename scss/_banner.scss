@@ -1,0 +1,66 @@
+//==== Banner start ====//
+.custom-padding {
+    padding: 50px 90px;
+
+    @include mq(max, 1366px) {
+        padding: 45px;
+    }
+}
+
+.banner_sec {
+    h1 {
+        font-size: 40px;
+        color: $white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 18px;
+        color: $white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+}
+
+.bg_img {
+    background-image: url(../img/bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.content_sec {
+    h3 {
+        font-size: 24px;
+        color: $main;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+    }
+}
+
+.add-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    a {
+        font-size: 17.62px;
+        color: $white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        background-color: $yellow;
+        padding: 15px;
+        @include border-radius(7px);
+
+        img {
+        }
+    }
+}
+
+.bg_white {
+}
+//==== Banner end ====//

@@ -1,6 +1,22 @@
 header,
 footer,
-section {
+section,
+main {
     @include full-width;
 }
 
+.main-wapr {
+    display: flex;
+    flex-direction: row;
+}
+
+.rightSection {
+    background-color: $white;
+    width: calc(100% - 345px);
+}
+
+@import "./aside";
+@import "./banner";
+@import "./breadcream";
+@import "./pagination";
+@import "./table";

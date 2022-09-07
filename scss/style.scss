@@ -10,13 +10,14 @@ body {
   @include full-width;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f5f6f8;
 }
 
 @include mq(min, 1440px) {
   .container-fluid {
     padding-left: 45px;
-    padding-right: 45px;
+    padding-right: 230px;
   }
 }
 
