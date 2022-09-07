@@ -11,8 +11,16 @@ nav {
     .navbar {
         &-toggler {
             position: relative;
+            outline: none;
+            box-shadow: none;
 
-            span {
+            &:hover,
+            &:active {
+                outline: none;
+                box-shadow: none;
+            }
+
+            i.fa-bars {
                 color: $main;
             }
         }
@@ -24,8 +32,18 @@ nav {
             ul {
                 font-size: 0;
 
-                @include mq(min, 1440px) {
-                    padding-left: 17.4%;
+                @include mq(min, 1441px) {
+                    padding-left: 330px;
+                }
+
+                @include mq(max, 767px) {
+                    position: absolute;
+                    background: #27c9dd;
+                    width: 100%;
+                    left: 0;
+                    z-index: 9;
+                    padding: 10px 0;
+                    text-align: center;
                 }
 
                 li {
@@ -41,36 +59,66 @@ nav {
                             padding: 0 44px;
                         }
 
+                        @include mq(max, 767px) {
+                            font-size: 18px;
+                            border-bottom: 1px dashed #0dafc3;
+                            padding: 5px;
+                        }
+
                         &.active,
                         &:hover {
                             color: $white;
                         }
                     }
-                }
 
-                &.navbar-right {
-                    padding: 0;
-                    margin: 0;
-
-                    li {
-                        font-size: 16px;
-                        font-family: Arial, sans-serif;
-                        font-weight: normal;
-                        color: $white;
-                        display: flex;
-                        align-items: center;
-
+                    &:first-child {
                         a {
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: $white;
-                            padding: 0;
-                            padding-left: 5px;
+                            padding-left: 0;
 
-                            &:hover {
-                                color: $main;
+                            @include mq(max, 767px) {
+                                padding-left: 15px;
                             }
                         }
+                    }
+                    &:last-child {
+                        a {
+                            padding-right: 0;
+
+                            @include mq(max, 767px) {
+                                padding-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-right {
+            padding: 0;
+            margin: 0;
+
+            @include mq(max, 767px) {
+                position: absolute;
+                right: 15px;
+            }
+
+            li {
+                font-size: 16px;
+                font-family: Arial, sans-serif;
+                font-weight: normal;
+                color: $white;
+                display: flex;
+                align-items: center;
+
+                a {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $white;
+                    padding: 0;
+                    padding-left: 5px;
+
+                    &:hover {
+                        color: $main;
                     }
                 }
             }

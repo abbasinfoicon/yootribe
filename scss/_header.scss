@@ -3,6 +3,10 @@
     @include full-width;
     background-color: $turquoise;
     padding: 33px 0;
+
+    @include mq(max, 767px) {
+        padding: 15px 0;
+    }
 }
 
 // top-head
@@ -11,6 +15,10 @@
 
     .logo {
         margin-bottom: 30px;
+
+        @include mq(max, 767px) {
+            margin-bottom: 15px;
+        }
 
         a {
             display: block;
@@ -21,12 +29,28 @@
             }
         }
     }
+
+    @include mq(max, 767px) {
+        .row {
+            .col-sm-3 {
+                width: 75px;
+            }
+
+            .col-sm-9 {
+                width: calc(100% - 75px);
+            }
+        }
+    }
 }
 
 // user-info
 .user-info {
     position: relative;
     margin-bottom: 30px;
+
+    @include mq(max, 767px) {
+        margin-bottom: 15px;
+    }
 
     ul {
         margin: 0;
@@ -44,6 +68,10 @@
                 @include transition(0.5s);
                 font-size: 24px;
 
+                @include mq(max, 767px) {
+                    font-size: 24px;
+                }
+
                 &.user {
                     width: 25px;
                     height: 25px;
@@ -52,6 +80,10 @@
                     @include flex-center;
                     color: $white;
                     font-size: 16px;
+
+                    @include mq(max, 767px) {
+                        font-size: 15px;
+                    }
 
                     &:hover {
                         color: $hover;

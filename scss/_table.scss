@@ -1,19 +1,118 @@
 //==== table start ====//
 .table {
-    &-responsive {
-    }
 
-    thead{
-        tr{
-            th{}
+    &-responsive {
+        margin-bottom: 100px;
+
+        @include mq(max, 1365px){
+            margin-bottom: 30px;
         }
     }
 
-    tbody{
-        tr{
-            td{
-                a{
-                    img{}
+    thead {
+        tr {
+            th {
+                font-size: 15px;
+                font-family: Arial, sans-serif;
+                font-weight: bold;
+                color: $main;
+                background-color: #f8f9fb;
+                padding: 20px;
+                border-bottom: none;
+
+                @include mq(max, 767px) {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+
+    tbody {
+        border-top: 0 !important;
+
+        tr {
+            border-bottom: 1px dashed #a6a6a6;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            td {
+                font-size: 15px;
+                font-family: Arial, sans-serif;
+                font-weight: normal;
+                color: lighten($black, 17%);
+                padding: 20px;
+                vertical-align: middle;
+                border: none;
+
+                @include mq(max, 767px) {
+                    padding: 15px;
+                }
+
+                &:nth-child(3), &:nth-child(4), &:nth-child(6){
+                    font-size: 16px;
+
+                    @include mq(max, 767px) {
+                        padding-left: 15px;
+                    }
+                }
+
+                &.logo {
+                    position: relative;
+
+                    img {
+                        width: 90px;
+                        min-width: 90px;
+                        height: 90px;
+                        object-fit: cover;
+                    }
+                }
+
+                &.banner {
+                    position: relative;
+
+                    img {
+                        width: 165px;
+                        min-width: 165px;
+                        min-height: 42px;
+                        max-height: 90px;
+                    }
+                }
+
+                &.actions {
+                    white-space: nowrap;
+                }
+
+                a {
+                    font-size: 10px;
+                    font-family: Arial, sans-serif;
+                    font-weight: normal;
+                    color: $main;
+                    text-transform: uppercase;
+                    text-align: center;
+                    display: inline-block;
+                    padding: 0 15px;
+
+                    &:first-child {
+                        padding: 0;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+                    }
+
+                    span {
+                        display: block;
+                    }
+
+                    strong {
+                        font-weight: 900;
+                    }
+
+                    img {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }

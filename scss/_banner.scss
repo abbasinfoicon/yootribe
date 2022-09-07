@@ -1,13 +1,21 @@
 //==== Banner start ====//
 .custom-padding {
     padding: 50px 90px;
+    padding-right: 230px;
 
-    @include mq(max, 1366px) {
+    @include mq(max, 1440px) {
         padding: 45px;
+    }
+
+    @include mq(max, 767px){
+        padding: 15px;
     }
 }
 
+// banner_sec
 .banner_sec {
+    position: relative;
+
     h1 {
         font-size: 40px;
         color: $white;
@@ -15,6 +23,11 @@
         font-weight: 600;
         margin-bottom: 30px;
         text-transform: uppercase;
+
+        @include mq(max, 767px){
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
     }
 
     p {
@@ -23,9 +36,18 @@
         font-family: "Poppins", sans-serif;
         font-weight: 500;
         margin-bottom: 0;
+
+        @include mq(max, 767px) {
+            font-size: 15px;
+
+            br {
+                display: none;
+            }
+        }
     }
 }
 
+// bg_img
 .bg_img {
     background-image: url(../img/bg-img.png);
     background-repeat: no-repeat;
@@ -33,19 +55,34 @@
     background-position: left;
 }
 
+// content_sec
 .content_sec {
+    position: relative;
+
     h3 {
         font-size: 24px;
         color: $main;
         font-family: "Poppins", sans-serif;
         font-weight: 600;
+        letter-spacing: -0.8px;
+        margin-bottom: 20px;
+
+        @include mq(max, 767px){
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
     }
 }
 
+// add-btn
 .add-btn {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    @include mq(max, 767px) {
+        margin-bottom: 15px;
+    }
 
     a {
         font-size: 17.62px;
@@ -53,14 +90,26 @@
         font-family: "Poppins", sans-serif;
         font-weight: 600;
         background-color: $yellow;
-        padding: 15px;
+        padding: 10px 25px;
         @include border-radius(7px);
+        letter-spacing: -0.5px;
+
+        @include mq(max, 767px) {
+            font-size: 15px;
+        }
+
+        &:hover {
+            background-color: $main;
+        }
 
         img {
+            padding-right: 10px;
         }
     }
 }
 
+// bg_white
 .bg_white {
+    background-color: $white;
 }
 //==== Banner end ====//

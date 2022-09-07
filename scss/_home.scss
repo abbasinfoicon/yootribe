@@ -5,14 +5,24 @@ main {
     @include full-width;
 }
 
+// main-wapr
 .main-wapr {
     display: flex;
     flex-direction: row;
+
+    @include mq(max, 1365px) {
+        flex-direction: column;
+    }
 }
 
+// rightSection
 .rightSection {
     background-color: $white;
     width: calc(100% - 345px);
+
+    @include mq(max, 1365px) {
+        width: 100%;
+    }
 }
 
 @import "./aside";

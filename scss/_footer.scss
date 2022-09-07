@@ -18,6 +18,10 @@
                 font-weight: bold;
                 font-family: Arial, sans-serif;
 
+                @include mq(max, 767px) {
+                    display: block;
+                }
+
                 a {
                     color: inherit;
                     font-size: inherit;
