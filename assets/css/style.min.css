@@ -1772,6 +1772,32 @@ aside .sidebar li.active a span {
   opacity: 0 !important;
 }
 
+.register-sec .form .form-group input {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+}
+
+.register-sec .form .form-group input::-webkit-input-placeholder {
+  color: #05506d;
+}
+
+.register-sec .form .form-group input:-ms-input-placeholder {
+  color: #05506d;
+}
+
+.register-sec .form .form-group input::-ms-input-placeholder {
+  color: #05506d;
+}
+
+.register-sec .form .form-group input::placeholder {
+  color: #05506d;
+}
+
+.register-sec .form .form-group select {
+  color: #05506d;
+}
+
 .footer {
   background-color: #343434;
 }

@@ -396,9 +396,12 @@
   }
 }
 
+// tox-notifications-container
 .tox-notifications-container {
   display: none !important;
   opacity: 0 !important;
 }
+
+@import './register-sec'
 
 //==== form end ====//
