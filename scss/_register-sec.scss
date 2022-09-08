@@ -1,26 +1,102 @@
 //==== RegisterForm start ====//
 .register-sec {
-    h3 {}
+    h3 {
+        font-size: 40.58px;
+        color: $white;
+        text-align: center;
+        margin-bottom: 50px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+    }
 
-    p {}
+    p {
+        font-size: 17px;
+        color: $white;
+        text-align: center;
+        margin-bottom: 65px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+    }
 
 
     .form {
         .form-group {
-            input {
+            margin-bottom: 30px;
+
+            input,
+            .custom-select {
                 font-size: 20px;
                 font-family: Arial, sans-serif;
                 font-weight: normal;
+                color: $main;
+                border: none;
 
                 &::placeholder {
                     color: $main;
                 }
             }
 
-            select {
-                color: $main;
+
+            .custom-select {
+                position: relative;
+
+                &::after {
+                    border-color: #d1d8dd;
+                    height: 12px;
+                    right: 23px;
+                    width: 12px;
+                }
+
+                span {
+                    &.current {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                ul.list {
+                    width: 100%;
+
+                    li {
+                        font-size: 18px;
+                        font-family: Arial, sans-serif;
+                        font-weight: normal;
+                        color: $main;
+                    }
+                }
+            }
+
+            &.form-check {
+                label {
+                    font-size: 15px;
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 400;
+                    color: $white;
+
+                    input {
+                        padding: 0;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 0;
+                        margin-right: 20px;
+                    }
+                }
             }
         }
+    }
+}
+
+.password-eye {
+    position: relative;
+
+    .toggle-password {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        color: #989898;
     }
 }
 

@@ -25,6 +25,22 @@ main {
     }
 }
 
+.body-bg {
+    background-image: url(../img/body-bg.jpg);
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-color: $body;
+
+    header {
+        background-color: transparent;
+    }
+}
+
+.mb-135 {
+    margin-bottom: 135px;
+}
+
 @import "./aside";
 @import "./banner";
 @import "./breadcream";

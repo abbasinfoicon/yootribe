@@ -331,6 +331,10 @@ input[type=number] {
   width: auto;
 }
 
+.top-head .logo a img.logo {
+  height: auto;
+}
+
 @media (max-width: 767px) {
   .top-head .row .col-sm-3 {
     width: 75px;
@@ -643,6 +647,22 @@ main {
   .rightSection {
     width: 100%;
   }
+}
+
+.body-bg {
+  background-image: url(../img/body-bg.jpg);
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-color: #1e8cb1;
+}
+
+.body-bg header {
+  background-color: transparent;
+}
+
+.mb-135 {
+  margin-bottom: 135px;
 }
 
 aside {
@@ -1345,7 +1365,7 @@ aside .sidebar li.active a span {
   left: 10px;
 }
 
-.form .form-group input {
+.form .form-group input, .form .form-group .custom-select {
   height: 58px;
   font-size: 16px;
   color: #000;
@@ -1360,27 +1380,27 @@ aside .sidebar li.active a span {
   padding: 6px 25px;
 }
 
-.form .form-group input::-webkit-input-placeholder {
+.form .form-group input::-webkit-input-placeholder, .form .form-group .custom-select::-webkit-input-placeholder {
   color: #000;
 }
 
-.form .form-group input:-ms-input-placeholder {
+.form .form-group input:-ms-input-placeholder, .form .form-group .custom-select:-ms-input-placeholder {
   color: #000;
 }
 
-.form .form-group input::-ms-input-placeholder {
+.form .form-group input::-ms-input-placeholder, .form .form-group .custom-select::-ms-input-placeholder {
   color: #000;
 }
 
-.form .form-group input::placeholder {
+.form .form-group input::placeholder, .form .form-group .custom-select::placeholder {
   color: #000;
 }
 
-.form .form-group input[type="file"] {
+.form .form-group input[type="file"], .form .form-group .custom-select[type="file"] {
   display: none;
 }
 
-.form .form-group input[type="file"] + label {
+.form .form-group input[type="file"] + label, .form .form-group .custom-select[type="file"] + label {
   border: none;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1404,11 +1424,11 @@ aside .sidebar li.active a span {
   line-height: 1;
 }
 
-.form .form-group input.chkbx-toggle {
+.form .form-group input.chkbx-toggle, .form .form-group .custom-select.chkbx-toggle {
   display: none;
 }
 
-.form .form-group input.chkbx-toggle + label {
+.form .form-group input.chkbx-toggle + label, .form .form-group .custom-select.chkbx-toggle + label {
   position: relative;
   cursor: pointer;
   outline: none;
@@ -1429,13 +1449,13 @@ aside .sidebar li.active a span {
   margin-bottom: 0;
 }
 
-.form .form-group input.chkbx-toggle + label::after, .form .form-group input.chkbx-toggle + label::before {
+.form .form-group input.chkbx-toggle + label::after, .form .form-group input.chkbx-toggle + label::before, .form .form-group .custom-select.chkbx-toggle + label::after, .form .form-group .custom-select.chkbx-toggle + label::before {
   content: "";
   display: block;
   position: absolute;
 }
 
-.form .form-group input.chkbx-toggle + label::before {
+.form .form-group input.chkbx-toggle + label::before, .form .form-group .custom-select.chkbx-toggle + label::before {
   right: 0;
   left: 0;
   top: 0;
@@ -1450,7 +1470,7 @@ aside .sidebar li.active a span {
   transition: background 0.4s;
 }
 
-.form .form-group input.chkbx-toggle + label::after {
+.form .form-group input.chkbx-toggle + label::after, .form .form-group .custom-select.chkbx-toggle + label::after {
   top: 2px;
   left: 3px;
   width: 12px;
@@ -1473,23 +1493,23 @@ aside .sidebar li.active a span {
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.form .form-group input.chkbx-toggle:checked + label::before {
+.form .form-group input.chkbx-toggle:checked + label::before, .form .form-group .custom-select.chkbx-toggle:checked + label::before {
   background-color: #1c86ab;
 }
 
-.form .form-group input.chkbx-toggle:checked + label::after {
+.form .form-group input.chkbx-toggle:checked + label::after, .form .form-group .custom-select.chkbx-toggle:checked + label::after {
   -webkit-transform: translateX(20px);
   transform: translateX(20px);
   left: -5px;
 }
 
-.form .form-group input.chkbx-toggle:disabled + label {
+.form .form-group input.chkbx-toggle:disabled + label, .form .form-group .custom-select.chkbx-toggle:disabled + label {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   cursor: default;
 }
 
-.form .form-group input.w238p {
+.form .form-group input.w238p, .form .form-group .custom-select.w238p {
   max-width: 238px;
 }
 
@@ -1772,30 +1792,112 @@ aside .sidebar li.active a span {
   opacity: 0 !important;
 }
 
-.register-sec .form .form-group input {
+.register-sec h3 {
+  font-size: 40.58px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.register-sec p {
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 65px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.register-sec .form .form-group {
+  margin-bottom: 30px;
+}
+
+.register-sec .form .form-group input,
+.register-sec .form .form-group .custom-select {
   font-size: 20px;
   font-family: Arial, sans-serif;
   font-weight: normal;
+  color: #05506d;
+  border: none;
 }
 
-.register-sec .form .form-group input::-webkit-input-placeholder {
+.register-sec .form .form-group input::-webkit-input-placeholder,
+.register-sec .form .form-group .custom-select::-webkit-input-placeholder {
   color: #05506d;
 }
 
-.register-sec .form .form-group input:-ms-input-placeholder {
+.register-sec .form .form-group input:-ms-input-placeholder,
+.register-sec .form .form-group .custom-select:-ms-input-placeholder {
   color: #05506d;
 }
 
-.register-sec .form .form-group input::-ms-input-placeholder {
+.register-sec .form .form-group input::-ms-input-placeholder,
+.register-sec .form .form-group .custom-select::-ms-input-placeholder {
   color: #05506d;
 }
 
-.register-sec .form .form-group input::placeholder {
+.register-sec .form .form-group input::placeholder,
+.register-sec .form .form-group .custom-select::placeholder {
   color: #05506d;
 }
 
-.register-sec .form .form-group select {
+.register-sec .form .form-group .custom-select {
+  position: relative;
+}
+
+.register-sec .form .form-group .custom-select::after {
+  border-color: #d1d8dd;
+  height: 12px;
+  right: 23px;
+  width: 12px;
+}
+
+.register-sec .form .form-group .custom-select span.current {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.register-sec .form .form-group .custom-select ul.list {
+  width: 100%;
+}
+
+.register-sec .form .form-group .custom-select ul.list li {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
   color: #05506d;
+}
+
+.register-sec .form .form-group.form-check label {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+.register-sec .form .form-group.form-check label input {
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 0;
+  margin-right: 20px;
+}
+
+.password-eye {
+  position: relative;
+}
+
+.password-eye .toggle-password {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #989898;
 }
 
 .footer {

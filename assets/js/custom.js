@@ -44,46 +44,46 @@
             });
         })
 
-
-        $('.community_carousel').owlCarousel({
-            loop: true,
-            margin: 0,
-            autoplay: false,
-            nav: true,
-            dots: false,
-            navText: [
-                "<img src='assets/img/left-icon.png' class='left-icon'>",
-                "<img src='assets/img/right-icon.png' class='right-icon'>"
-            ],
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
+        if ($('.community_carousel').length) {
+            $('.community_carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                autoplay: false,
+                nav: true,
+                dots: false,
+                navText: [
+                    "<img src='assets/img/left-icon.png' class='left-icon'>",
+                    "<img src='assets/img/right-icon.png' class='right-icon'>"
+                ],
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
                 }
-            }
-        });
-
+            });
+        }
 
         // popup-video-section statt
-        $(function () {
-            $('.popup-youtube').magnificPopup({
-                disableOn: 700,
-                type: 'iframe',
-                mainClass: 'mfp-fade',
-                removalDelay: 160,
-                preloader: false,
-                fixedContentPos: false
+        if ($('.popup-youtube').length) {
+            $(function () {
+                $('.popup-youtube').magnificPopup({
+                    disableOn: 700,
+                    type: 'iframe',
+                    mainClass: 'mfp-fade',
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false
+                });
             });
-        });
+        }
         // popup-video-section end
-
-
     });
 
     // tooltips start
@@ -93,35 +93,67 @@
     })
     // tooltips end
 
+    // password-eye start
+    if ($('.toggle-password').length) {
+        $(".toggle-password").click(function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+    }
+    // password-eye end
+
+    // custom-select start
+    if ($('.custom-select').length) {
+        $('.custom-select').niceSelect();
+    }
+    // custom-select end
+
+    // -----Country Code Selection
+    if ($('#mobile_code').length) {
+        $("#mobile_code").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+    }
+
     // tinymce-editor start
-    tinymce.init({
-        selector: "#editor",
-        menubar: false,
-        statusbar: false,
-        plugins:
-            "autoresize anchor autolink charmap code codesample directionality fullpage help hr image imagetools insertdatetime link lists media nonbreaking pagebreak preview print searchreplace table template textpattern toc visualblocks visualchars",
-        toolbar:
-            "bold italic underline forecolor | blocks | link | alignleft aligncenter alignright | bullist numlist | blockquote| image",
-        skin: "bootstrap",
-        toolbar_drawer: "floating",
-        min_height: 400,
-        autoresize_bottom_margin: 16,
-        setup: (editor) => {
-            editor.on("init", () => {
-                editor.getContainer().style.transition =
-                    "border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
-            });
-            editor.on("focus", () => {
-                (editor.getContainer().style.boxShadow =
-                    "0 0 0 .2rem rgba(0, 123, 255, .25)"),
-                    (editor.getContainer().style.borderColor = "#80bdff");
-            });
-            editor.on("blur", () => {
-                (editor.getContainer().style.boxShadow = ""),
-                    (editor.getContainer().style.borderColor = "");
-            });
-        }
-    });
+    if ($('#editor').length) {
+        tinymce.init({
+            selector: "#editor",
+            menubar: false,
+            statusbar: false,
+            plugins:
+                "autoresize anchor autolink charmap code codesample directionality fullpage help hr image imagetools insertdatetime link lists media nonbreaking pagebreak preview print searchreplace table template textpattern toc visualblocks visualchars",
+            toolbar:
+                "bold italic underline forecolor | blocks | link | alignleft aligncenter alignright | bullist numlist | blockquote| image",
+            skin: "bootstrap",
+            toolbar_drawer: "floating",
+            min_height: 400,
+            autoresize_bottom_margin: 16,
+            setup: (editor) => {
+                editor.on("init", () => {
+                    editor.getContainer().style.transition =
+                        "border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
+                });
+                editor.on("focus", () => {
+                    (editor.getContainer().style.boxShadow =
+                        "0 0 0 .2rem rgba(0, 123, 255, .25)"),
+                        (editor.getContainer().style.borderColor = "#80bdff");
+                });
+                editor.on("blur", () => {
+                    (editor.getContainer().style.boxShadow = ""),
+                        (editor.getContainer().style.borderColor = "");
+                });
+            }
+        });
+    }
     // tinymce-editor end
 
 })(jQuery);
