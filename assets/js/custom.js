@@ -104,7 +104,7 @@
             "bold italic underline forecolor | blocks | link | alignleft aligncenter alignright | bullist numlist | blockquote| image",
         skin: "bootstrap",
         toolbar_drawer: "floating",
-        min_height: 200,
+        min_height: 400,
         autoresize_bottom_margin: 16,
         setup: (editor) => {
             editor.on("init", () => {

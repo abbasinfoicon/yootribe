@@ -172,7 +172,7 @@
                                     <div class="col-md-6 form-group">
                                         <label for="basic-url" class="form-label">Slug</label>
                                         <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon3">yootribe.com</span>
+                                            <span class="input-group-text" id="basic-addon3">yootribe.com/</span>
                                             <input type="text" class="form-control" id="basic-url"
                                                 aria-describedby="basic-addon3">
                                         </div>
@@ -194,7 +194,7 @@
                                             1400x300.</p>
                                     </div>
 
-                                    <div class="col-md-6 form-group bg_main">
+                                    <div class="col-md-6 form-group bg_gray">
                                         <input type="file" id="logo" accept=".jpg,.jpeg" />
                                         <label for="logo" class="file_btn"><i class="fa-solid fa-plus"></i> Add logo
                                             <span>( Jpeg or png )</span></label>
@@ -204,12 +204,12 @@
 
                                 <div class="form-group">
                                     <label for="editors">Description</label>
-                                    <textarea id="editor"></textarea>
+                                    <textarea id="editor" cols="30" rows="10"></textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="editors">Datas you want to collect </label>
-                                    <a data-bs-toggle="tooltip" data-bs-placement="top"
+                                    <a class="custom_toltip" data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="Datas you want to collect">
                                         <i class="fa-solid fa-circle-question"></i>
                                     </a>
@@ -218,20 +218,24 @@
                                 <div class="row">
                                     <div class="col-md-6 form-group">
                                         <div class="req">
+                                            <p>Required</p>
                                             <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
-                                            <label for="toggle_1">Required</label>
+                                            <label for="toggle_1"></label>
                                             <i class="fa-solid fa-circle-xmark"></i>
                                         </div>
+
                                         <input type="text" name="fname" id="fname" class="form-control"
                                             placeholder="First name">
                                     </div>
 
                                     <div class="col-md-6 form-group">
                                         <div class="req">
+                                            <p>Required</p>
                                             <input type="checkbox" id="toggle_2" class="chkbx-toggle" value="1" checked>
-                                            <label for="toggle_2">Required</label>
+                                            <label for="toggle_2"></label>
                                             <i class="fa-solid fa-circle-xmark"></i>
                                         </div>
+
                                         <input type="text" name="lname" id="lname" class="form-control"
                                             placeholder="Last name">
                                     </div>
@@ -246,14 +250,17 @@
 
                                     <div class="col-md-6 form-group">
                                         <div class="req">
+                                            <p>Required</p>
                                             <input type="checkbox" id="toggle_3" class="chkbx-toggle" value="1" checked>
-                                            <label for="toggle_3">Required</label>
+                                            <label for="toggle_3"></label>
                                             <i class="fa-solid fa-circle-xmark"></i>
                                         </div>
+
                                         <div class="input-group">
                                             <div class="input-group-text">
                                                 <input class="form-check-input mt-0" type="checkbox" value="">
                                             </div>
+
                                             <input type="text" name="lname" id="lname" class="form-control"
                                                 placeholder="Phone number">
                                         </div>
@@ -287,7 +294,7 @@
                                 </div>
 
                                 <div class="row_center">
-                                    <button class="btn btn-second">save draft</button>
+                                    <button class="btn  ">save draft</button>
                                     <button class="btn btn-custom">Validate</button>
                                 </div>
 

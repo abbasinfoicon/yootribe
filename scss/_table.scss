@@ -49,9 +49,7 @@
                     padding: 15px;
                 }
 
-                &:nth-child(3),
-                &:nth-child(4),
-                &:nth-child(6) {
+                &.f-16 {
                     font-size: 16px;
 
                     @include mq(max, 767px) {
@@ -59,17 +57,18 @@
                     }
                 }
 
-                &:nth-child(3) {
+                &.w200p {
                     min-width: 200px;
                     width: 200px;
                 }
 
-                &:nth-child(6) {
+                &.no_wrap {
                     white-space: nowrap;
                 }
 
-                &:nth-child(7) {
+                &.w110p {
                     min-width: 110px;
+                    width: 110px;
                 }
 
                 &.dflex {
