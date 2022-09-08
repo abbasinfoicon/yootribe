@@ -1,6 +1,5 @@
 //==== table start ====//
 .table {
-
     &-responsive {
         margin-bottom: 100px;
 
@@ -64,13 +63,17 @@
                     min-width: 200px;
                     width: 200px;
                 }
-                
-                &:nth-child(6){
+
+                &:nth-child(6) {
                     white-space: nowrap;
                 }
-                
-                &:nth-child(7){
+
+                &:nth-child(7) {
                     min-width: 110px;
+                }
+
+                &.dflex {
+                    display: flex;
                 }
 
                 &.logo {
@@ -127,6 +130,23 @@
 
                     img {
                         margin-bottom: 10px;
+                    }
+
+                    &.review {
+                        width: 52px;
+                        height: 52px;
+                        background: $main;
+                        font-size: 10px;
+                        font-weight: bold;
+                        color: $white;
+                        border-radius: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &:hover {
+                            background-color: $yellow;
+                        }
                     }
                 }
             }

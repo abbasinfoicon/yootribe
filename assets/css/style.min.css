@@ -973,6 +973,9 @@ aside .sidebar li.active a span {
 .table tbody tr td:nth-child(7) {
   min-width: 110px;
 }
+.table tbody tr td.dflex {
+  display: flex;
+}
 .table tbody tr td.logo {
   position: relative;
 }
@@ -1019,6 +1022,21 @@ aside .sidebar li.active a span {
 }
 .table tbody tr td a img {
   margin-bottom: 10px;
+}
+.table tbody tr td a.review {
+  width: 52px;
+  height: 52px;
+  background: #05506d;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.table tbody tr td a.review:hover {
+  background-color: #ea8f0c;
 }
 
 .form [type=file] {
