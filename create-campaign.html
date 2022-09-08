@@ -216,7 +216,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-6 form-group disable_input">
                                         <div class="req">
                                             <p>Required</p>
                                             <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
@@ -228,7 +228,7 @@
                                             placeholder="First name">
                                     </div>
 
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-6 form-group disable_input">
                                         <div class="req">
                                             <p>Required</p>
                                             <input type="checkbox" id="toggle_2" class="chkbx-toggle" value="1" checked>
@@ -242,8 +242,15 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" name="email" id="email" class="form-control"
+                                    <div class="col-md-6 form-group disable_input">
+                                        <div class="req opcity-0">
+                                            <p>Required</p>
+                                            <input type="checkbox" id="toggle_3" class="chkbx-toggle" value="1" checked>
+                                            <label for="toggle_3"></label>
+                                            <i class="fa-solid fa-circle-xmark"></i>
+                                        </div>
+
+                                        <input type="email" name="email" id="email" class="form-control"
                                             placeholder="Email">
                                         <p>Email is always mandatory and cannot be deleted</p>
                                     </div>
@@ -256,45 +263,53 @@
                                             <i class="fa-solid fa-circle-xmark"></i>
                                         </div>
 
-                                        <div class="input-group">
+                                        <div class="input-group disable_input">
                                             <div class="input-group-text">
-                                                <input class="form-check-input mt-0" type="checkbox" value="">
+                                                <input class="form-check-input mt-0" type="checkbox" value=""
+                                                    aria-label="Checkbox for following text input">
                                             </div>
 
-                                            <input type="text" name="lname" id="lname" class="form-control"
-                                                placeholder="Phone number">
+                                            <input type="number" name="lname" id="lname" class="form-control"
+                                                aria-label="Text input with checkbox" placeholder="Phone number">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6 form-group second_main">
-                                        <input type="file" id="multiple" multiple="multiple" />
-                                        <label for="multiple" class="file_btn"><i class="fa-solid fa-plus"></i> Add
-                                            multiple choice</span></label>
-                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="multiple_sinlge">
+                                            <div class="second_main">
+                                                <input type="file" id="multiple" multiple="multiple" />
+                                                <label for="multiple" class="file_btn"><i class="fa-solid fa-plus"></i>
+                                                    Add
+                                                    multiple choice</span></label>
+                                            </div>
 
-                                    <div class="col-md-6 form-group second_main">
-                                        <input type="file" id="single" />
-                                        <label for="single" class="file_btn"><i class="fa-solid fa-plus"></i> Add single
-                                            choice</span></label>
+                                            <div class="second_main">
+                                                <input type="file" id="single" />
+                                                <label for="single" class="file_btn"><i class="fa-solid fa-plus"></i>
+                                                    Add
+                                                    single
+                                                    choice</span></label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-6">
                                         <label for="campaign">How many days will your campaign last ?</label>
-                                        <input type="text" name="campaign" id="campaign" class="form-control">
+                                        <input type="text" name="campaign" id="campaign" class="form-control w238p">
                                     </div>
                                 </div>
 
-                                <div class="form-group text-center">
+                                <div class="form-group preview-campaign">
                                     <a href="#"><img src="assets/img/campaign.png" alt="" class="img-fluid"> Click here
                                         for a preview of your campaign</a>
                                 </div>
 
                                 <div class="row_center">
-                                    <button class="btn  ">save draft</button>
+                                    <button class="btn btn-second">Save draft</button>
                                     <button class="btn btn-custom">Validate</button>
                                 </div>
 
