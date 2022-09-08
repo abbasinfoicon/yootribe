@@ -161,107 +161,139 @@
                 <div class="custom-padding">
                     <!-- content_sec -->
                     <div class="content_sec bg_white">
-                        <div class="add-btn">
-                            <a href="#"><img src="assets/img/rocket.png" alt="rocket"> Create new campaign</a>
+                        <div class="form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="name">Campaign name</label>
+                                        <input type="text" name="name" id="name" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6 form-group">
+                                        <label for="basic-url" class="form-label">Slug</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon3">yootribe.com</span>
+                                            <input type="text" class="form-control" id="basic-url"
+                                                aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" name="title" id="title" class="form-control">
+                                    <p>This title will show under your banner</p>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group bg_main">
+                                        <input type="file" id="banner" accept=".jpg,.jpeg" />
+                                        <label for="banner" class="file_btn"><i class="fa-solid fa-plus"></i> Add banner
+                                            <span>( Jpeg or png )</span></label>
+                                        <p>This will go at the top of the project page as a header. We recommend
+                                            1400x300.</p>
+                                    </div>
+
+                                    <div class="col-md-6 form-group bg_main">
+                                        <input type="file" id="logo" accept=".jpg,.jpeg" />
+                                        <label for="logo" class="file_btn"><i class="fa-solid fa-plus"></i> Add logo
+                                            <span>( Jpeg or png )</span></label>
+                                        <p>This will be shown as the logo of your campaign. We recommend 500x500</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="editors">Description</label>
+                                    <textarea id="editor"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="editors">Datas you want to collect </label>
+                                    <a data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="Datas you want to collect">
+                                        <i class="fa-solid fa-circle-question"></i>
+                                    </a>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <div class="req">
+                                            <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
+                                            <label for="toggle_1">Required</label>
+                                            <i class="fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <input type="text" name="fname" id="fname" class="form-control"
+                                            placeholder="First name">
+                                    </div>
+
+                                    <div class="col-md-6 form-group">
+                                        <div class="req">
+                                            <input type="checkbox" id="toggle_2" class="chkbx-toggle" value="1" checked>
+                                            <label for="toggle_2">Required</label>
+                                            <i class="fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <input type="text" name="lname" id="lname" class="form-control"
+                                            placeholder="Last name">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" name="email" id="email" class="form-control"
+                                            placeholder="Email">
+                                        <p>Email is always mandatory and cannot be deleted</p>
+                                    </div>
+
+                                    <div class="col-md-6 form-group">
+                                        <div class="req">
+                                            <input type="checkbox" id="toggle_3" class="chkbx-toggle" value="1" checked>
+                                            <label for="toggle_3">Required</label>
+                                            <i class="fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <input class="form-check-input mt-0" type="checkbox" value="">
+                                            </div>
+                                            <input type="text" name="lname" id="lname" class="form-control"
+                                                placeholder="Phone number">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group second_main">
+                                        <input type="file" id="multiple" multiple="multiple" />
+                                        <label for="multiple" class="file_btn"><i class="fa-solid fa-plus"></i> Add
+                                            multiple choice</span></label>
+                                    </div>
+
+                                    <div class="col-md-6 form-group second_main">
+                                        <input type="file" id="single" />
+                                        <label for="single" class="file_btn"><i class="fa-solid fa-plus"></i> Add single
+                                            choice</span></label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="campaign">How many days will your campaign last ?</label>
+                                        <input type="text" name="campaign" id="campaign" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center">
+                                    <a href="#"><img src="assets/img/campaign.png" alt="" class="img-fluid"> Click here
+                                        for a preview of your campaign</a>
+                                </div>
+
+                                <div class="row_center">
+                                    <button class="btn btn-second">save draft</button>
+                                    <button class="btn btn-custom">Validate</button>
+                                </div>
+
+                            </form>
                         </div>
-
-                        <h3>3 draft Campaign listed</h3>
                     </div><!-- /content_sec -->
-
-                    <!-- table-responsive -->
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>logo</th>
-                                    <th>Banner</th>
-                                    <th>Name</th>
-                                    <th>Status</th>
-                                    <th>Days</th>
-                                    <th>NFT</th>
-                                    <th>Price</th>
-                                    <th>Copies</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td class="logo"><img src="assets/img/img1.png" alt="logo" class="img-fluid"></td>
-                                    <td class="banner"><img src="assets/img/banner1.png" alt="banner" class="img-fluid">
-                                    </td>
-                                    <td>Summer festival 2022 for the best of us</td>
-                                    <td>Draft</td>
-                                    <td>30</td>
-                                    <td>Lets go to Dubai !</td>
-                                    <td>250$ 0.15 ETH</td>
-                                    <td>150</td>
-                                    <td>
-                                        <a href="#"><img src="assets/img/edit.png" alt="edit"> <span>Edit</span></a>
-                                        <a href="#"><img src="assets/img/delete.png" alt="delete">
-                                            <span>Trash</span></a>
-                                        <a href="#"><img src="assets/img/send.png" alt="live"> <strong><span>Go
-                                                    Live!</span></strong></a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="logo"><img src="assets/img/img1.png" alt="logo" class="img-fluid"></td>
-                                    <td class="banner"><img src="assets/img/banner1.png" alt="banner" class="img-fluid">
-                                    </td>
-                                    <td>Summer festival 2022 for the best of us</td>
-                                    <td>Draft</td>
-                                    <td>30</td>
-                                    <td>Lets go to Dubai !</td>
-                                    <td>250$ 0.15 ETH</td>
-                                    <td>150</td>
-                                    <td>
-                                        <a href="#"><img src="assets/img/edit.png" alt="edit"> <span>Edit</span></a>
-                                        <a href="#"><img src="assets/img/delete.png" alt="delete">
-                                            <span>Trash</span></a>
-                                        <a href="#"><img src="assets/img/send.png" alt="live"> <strong><span>Go
-                                                    Live!</span></strong></a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="logo"><img src="assets/img/img1.png" alt="logo" class="img-fluid"></td>
-                                    <td class="banner"><img src="assets/img/banner1.png" alt="banner" class="img-fluid">
-                                    </td>
-                                    <td>Summer festival 2022 for the best of us</td>
-                                    <td>Draft</td>
-                                    <td>30</td>
-                                    <td>Lets go to Dubai !</td>
-                                    <td>250$ 0.15 ETH</td>
-                                    <td>150</td>
-                                    <td class="actions">
-                                        <a href="#"><img src="assets/img/edit.png" alt="edit"> <span>Edit</span></a>
-                                        <a href="#"><img src="assets/img/delete.png" alt="delete">
-                                            <span>Trash</span></a>
-                                        <a href="#"><img src="assets/img/send.png" alt="live"> <strong><span>Go
-                                                    Live!</span></strong></a>
-                                    </td>
-                                </tr>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><!-- /table-responsive -->
-
-                    <!-- pagination -->
-                    <div class="pagination">
-                        <ul>
-                            <li class="arrow-left"><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li> ... </li>
-                            <li><a href="#">10</a></li>
-                            <li class="arrow-right"><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
-                        </ul>
-                    </div><!-- /pagination -->
                 </div>
             </div>
         </div><!-- /main-wapr -->
@@ -300,6 +332,7 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-origin/tinymce/6.1.2-8/tinymce.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
 
