@@ -1649,7 +1649,7 @@ aside .sidebar li.active a span {
   -ms-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
-  height: 199px;
+  min-height: 199px;
   background: #05506d;
 }
 .nft_modal .modal-dialog .modal-content .modal-body .popup-sec {
@@ -1664,8 +1664,34 @@ aside .sidebar li.active a span {
   font-size: 18px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  padding: 15px;
+  padding: 0 15px;
   color: #fff;
+}
+.nft_modal .modal-dialog .modal-content .modal-body .popup-sec .row_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+.nft_modal .modal-dialog .modal-content .modal-body .popup-sec .row_btn a {
+  font-size: 18.64px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  padding: 2px 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  width: 90px;
+  height: 35px;
+  transition: 0.5s;
+}
+.nft_modal .modal-dialog .modal-content .modal-body .popup-sec .row_btn a:hover {
+  background-color: #fff;
+  color: #05506d;
 }
 
 .modal-backdrop {
