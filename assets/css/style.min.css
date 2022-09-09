@@ -1635,6 +1635,46 @@ aside .sidebar li.active a span {
   color: #989898;
 }
 
+.nft_modal .modal-dialog {
+  max-width: 735px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: 735px;
+}
+.nft_modal .modal-dialog .modal-content {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  height: 199px;
+  background: #05506d;
+}
+.nft_modal .modal-dialog .modal-content .modal-body .popup-sec {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.nft_modal .modal-dialog .modal-content .modal-body .popup-sec p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
+  color: #fff;
+}
+
+.modal-backdrop {
+  background-color: #000;
+  opacity: 0.85 !important;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
 .footer {
   background-color: #343434;
 }
