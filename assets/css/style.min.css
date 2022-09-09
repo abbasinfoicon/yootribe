@@ -1001,8 +1001,8 @@ aside .sidebar li.active a span {
   white-space: nowrap;
 }
 .table tbody tr td.w110p {
-  min-width: 110px;
-  width: 110px;
+  min-width: 105px;
+  width: 105px;
 }
 .table tbody tr td.dflex {
   display: flex;
