@@ -1017,6 +1017,7 @@ aside .sidebar li.active a span {
 }
 .table tbody tr td.logo {
   position: relative;
+  width: 90px;
 }
 .table tbody tr td.logo img {
   width: 90px;
