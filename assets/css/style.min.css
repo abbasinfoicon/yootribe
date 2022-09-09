@@ -1509,6 +1509,11 @@ aside .sidebar li.active a span {
     padding-top: 30px;
   }
 }
+.register-sec img {
+  display: block;
+  width: auto;
+  margin: 0 auto 30px;
+}
 .register-sec h3 {
   font-size: 40.58px;
   color: #fff;
@@ -1524,6 +1529,11 @@ aside .sidebar li.active a span {
   margin-bottom: 65px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+}
+.register-sec p span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 30px;
 }
 .register-sec .form .form-group {
   margin-bottom: 40px;
