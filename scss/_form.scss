@@ -24,7 +24,8 @@
         margin-right: 20px;
       }
 
-      span {}
+      span {
+      }
     }
 
     .custom_toltip {
@@ -35,7 +36,8 @@
       left: 10px;
     }
 
-    input, .custom-select {
+    input,
+    .custom-select {
       height: 58px;
       font-size: 16px;
       color: $black;
@@ -52,7 +54,7 @@
       &[type="file"] {
         display: none;
 
-        &+label {
+        & + label {
           border: none;
           @include border-radius(10px);
           color: $white;
@@ -75,7 +77,7 @@
       &.chkbx-toggle {
         display: none;
 
-        &+label {
+        & + label {
           position: relative;
           cursor: pointer;
           outline: none;
@@ -116,7 +118,7 @@
         }
 
         &:checked {
-          &+label {
+          & + label {
             &::before {
               background-color: $hover;
             }
@@ -128,7 +130,7 @@
         }
 
         &:disabled {
-          &+label {
+          & + label {
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
             opacity: 0.5;
             cursor: default;
@@ -138,6 +140,52 @@
 
       &.w238p {
         max-width: 238px;
+      }
+    }
+
+    textarea {
+      font-size: 16px;
+      color: $black;
+      font-family: Arial, sans-serif;
+      font-weight: normal;
+      @include border-radius(10px);
+      border: 1px solid $border;
+      padding: 25px;
+      resize: none;
+    }
+
+    // custom-select
+    .custom-select {
+      position: relative;
+
+      &::after {
+        border-color: #d1d8dd;
+        height: 12px;
+        right: 23px;
+        width: 12px;
+      }
+
+      span {
+        &.current {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      ul.list {
+        width: 100%;
+
+        li {
+          font-size: 18px;
+          font-family: Arial, sans-serif;
+          font-weight: normal;
+          color: $main;
+
+          &:hover {
+            background-color: lighten($body, 37%);
+          }
+        }
       }
     }
 
@@ -194,9 +242,11 @@
         padding: 0;
       }
 
-      input {}
+      input {
+      }
 
-      label {}
+      label {
+      }
 
       i {
         color: $red;
@@ -211,7 +261,7 @@
       margin-bottom: 30px;
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         height: 31px;
         width: 2px;
@@ -394,6 +444,4 @@
   opacity: 0 !important;
 }
 
-@import './register-sec'
-
-//==== form end ====//
+@import "./register-sec"; //==== form end ====//

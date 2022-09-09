@@ -715,6 +715,14 @@ aside .sidebar li.active a span {
   font-weight: 500;
   margin-bottom: 0;
 }
+@media (min-width: 1366px) {
+  .banner_sec p {
+    width: 65%;
+  }
+  .banner_sec p br {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .banner_sec p {
     font-size: 15px;
@@ -1104,7 +1112,8 @@ aside .sidebar li.active a span {
   top: -10px;
   left: 10px;
 }
-.form .form-group input, .form .form-group .custom-select {
+.form .form-group input,
+.form .form-group .custom-select {
   height: 58px;
   font-size: 16px;
   color: #000;
@@ -1124,13 +1133,16 @@ aside .sidebar li.active a span {
 .form .form-group input:-ms-input-placeholder, .form .form-group .custom-select:-ms-input-placeholder {
   color: #000;
 }
-.form .form-group input::placeholder, .form .form-group .custom-select::placeholder {
+.form .form-group input::placeholder,
+.form .form-group .custom-select::placeholder {
   color: #000;
 }
-.form .form-group input[type=file], .form .form-group .custom-select[type=file] {
+.form .form-group input[type=file],
+.form .form-group .custom-select[type=file] {
   display: none;
 }
-.form .form-group input[type=file] + label, .form .form-group .custom-select[type=file] + label {
+.form .form-group input[type=file] + label,
+.form .form-group .custom-select[type=file] + label {
   border: none;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1152,10 +1164,12 @@ aside .sidebar li.active a span {
   padding: 19.5px 25px;
   line-height: 1;
 }
-.form .form-group input.chkbx-toggle, .form .form-group .custom-select.chkbx-toggle {
+.form .form-group input.chkbx-toggle,
+.form .form-group .custom-select.chkbx-toggle {
   display: none;
 }
-.form .form-group input.chkbx-toggle + label, .form .form-group .custom-select.chkbx-toggle + label {
+.form .form-group input.chkbx-toggle + label,
+.form .form-group .custom-select.chkbx-toggle + label {
   position: relative;
   cursor: pointer;
   outline: none;
@@ -1174,12 +1188,15 @@ aside .sidebar li.active a span {
   transition: background 0.4s;
   margin-bottom: 0;
 }
-.form .form-group input.chkbx-toggle + label::after, .form .form-group input.chkbx-toggle + label::before, .form .form-group .custom-select.chkbx-toggle + label::after, .form .form-group .custom-select.chkbx-toggle + label::before {
+.form .form-group input.chkbx-toggle + label::after, .form .form-group input.chkbx-toggle + label::before,
+.form .form-group .custom-select.chkbx-toggle + label::after,
+.form .form-group .custom-select.chkbx-toggle + label::before {
   content: "";
   display: block;
   position: absolute;
 }
-.form .form-group input.chkbx-toggle + label::before, .form .form-group .custom-select.chkbx-toggle + label::before {
+.form .form-group input.chkbx-toggle + label::before,
+.form .form-group .custom-select.chkbx-toggle + label::before {
   right: 0;
   left: 0;
   top: 0;
@@ -1192,7 +1209,8 @@ aside .sidebar li.active a span {
   -o-border-radius: 60px;
   transition: background 0.4s;
 }
-.form .form-group input.chkbx-toggle + label::after, .form .form-group .custom-select.chkbx-toggle + label::after {
+.form .form-group input.chkbx-toggle + label::after,
+.form .form-group .custom-select.chkbx-toggle + label::after {
   top: 2px;
   left: 3px;
   width: 12px;
@@ -1210,19 +1228,63 @@ aside .sidebar li.active a span {
   -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s;
 }
-.form .form-group input.chkbx-toggle:checked + label::before, .form .form-group .custom-select.chkbx-toggle:checked + label::before {
+.form .form-group input.chkbx-toggle:checked + label::before,
+.form .form-group .custom-select.chkbx-toggle:checked + label::before {
   background-color: #1c86ab;
 }
-.form .form-group input.chkbx-toggle:checked + label::after, .form .form-group .custom-select.chkbx-toggle:checked + label::after {
+.form .form-group input.chkbx-toggle:checked + label::after,
+.form .form-group .custom-select.chkbx-toggle:checked + label::after {
   transform: translateX(12px);
 }
-.form .form-group input.chkbx-toggle:disabled + label, .form .form-group .custom-select.chkbx-toggle:disabled + label {
+.form .form-group input.chkbx-toggle:disabled + label,
+.form .form-group .custom-select.chkbx-toggle:disabled + label {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   cursor: default;
 }
-.form .form-group input.w238p, .form .form-group .custom-select.w238p {
+.form .form-group input.w238p,
+.form .form-group .custom-select.w238p {
   max-width: 238px;
+}
+.form .form-group textarea {
+  font-size: 16px;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #a6a6a6;
+  padding: 25px;
+  resize: none;
+}
+.form .form-group .custom-select {
+  position: relative;
+}
+.form .form-group .custom-select::after {
+  border-color: #d1d8dd;
+  height: 12px;
+  right: 23px;
+  width: 12px;
+}
+.form .form-group .custom-select span.current {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form .form-group .custom-select ul.list {
+  width: 100%;
+}
+.form .form-group .custom-select ul.list li {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: #05506d;
+}
+.form .form-group .custom-select ul.list li:hover {
+  background-color: #9ddaee;
 }
 .form .form-group .input-group span {
   font-size: 18px;
