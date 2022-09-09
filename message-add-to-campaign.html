@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="home-page">
+<body class="home-page modal-open">
     <!-- preloader area start -->
     <div id="pre-loader">
         <div class="pre-loader">
@@ -275,20 +275,14 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <!-- Modal -->
+     <div class="modal fade nft_modal show" id="nft_modal" style="display: block">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="popup-sec">
+                        <p>Your NFT is now ready to be launch to one of your campaign</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -309,7 +303,7 @@
     <script src="https://cdn.tiny.cloud/1/no-origin/tinymce/6.1.2-8/tinymce.min.js"></script>
 
     <script src="assets/js/custom.js"></script>
-
+    <div class="modal-backdrop fade show"></div>
 </body>
 
 </html>
