@@ -122,8 +122,7 @@
             }
 
             &::after {
-              @include css3(transform, translateX(20px));
-              left: -5px;
+              @include css3(transform, translateX(12px));
             }
           }
         }
@@ -243,6 +242,7 @@
     }
   }
 
+  // disable_input
   .disable_input {
     input {
       border: none;
@@ -269,6 +269,7 @@
     }
   }
 
+  // bg_main
   .bg_main {
     label {
       background: $hover;
@@ -279,6 +280,7 @@
     }
   }
 
+  // bg_gray
   .bg_gray {
     label {
       background: #aaaaaa;
@@ -289,6 +291,7 @@
     }
   }
 
+  // preview-campaign
   .preview-campaign {
     text-align: center;
 
@@ -317,6 +320,7 @@
     }
   }
 
+  // row_center
   .row_center {
     @include flex-center;
     gap: 20px;
@@ -341,33 +345,21 @@
     }
   }
 
+  // btn-second
   .btn-second {
     color: $btn;
     background-color: $white;
     border-color: $btn;
   }
 
+  // btn-custom
   .btn-custom {
     color: $white;
     background-color: $yellow;
     border-color: $yellow;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // file_btn
   &.file_btn {
     background-color: #99c793;
     border-radius: 50px;

@@ -1,5 +1,11 @@
 //==== RegisterForm start ====//
 .register-sec {
+    padding-top: 123px;
+
+    @include mq(max, 1440px) {
+        padding-top: 30px;
+    }
+
     h3 {
         font-size: 40.58px;
         color: $white;
@@ -18,10 +24,9 @@
         font-weight: 400;
     }
 
-
     .form {
         .form-group {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
 
             input,
             .custom-select {
@@ -35,7 +40,6 @@
                     color: $main;
                 }
             }
-
 
             .custom-select {
                 position: relative;
@@ -63,11 +67,22 @@
                         font-family: Arial, sans-serif;
                         font-weight: normal;
                         color: $main;
+
+                        &:hover{
+                            background-color: lighten($body, 37%);
+                        }
                     }
                 }
             }
 
             &.form-check {
+                padding-left: 0;
+
+                .form-check-input {
+                    margin-left: 8px;
+                    margin-top: 4px;
+                }
+
                 label {
                     font-size: 15px;
                     font-family: "Poppins", sans-serif;
@@ -81,9 +96,31 @@
                         border-radius: 0;
                         margin-right: 20px;
                     }
+
+                    &.form-check-label {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+
+            .iti {
+                width: 100%;
+
+                .iti__selected-flag {
+                    padding: 0 15px;
+                }
+
+                input#mobile_code {
+                    padding-left: 110px !important;
                 }
             }
         }
+    }
+
+    .btn-custom {
+        font-size: 18.58px;
+        padding: 7.59px 44px;
+        @include border-radius(6px);
     }
 }
 
