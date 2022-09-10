@@ -153,6 +153,7 @@
                         display: inline-flex;
                         align-items: center;
                         justify-content: center;
+                        vertical-align: bottom;
 
                         &:hover {
                             background-color: $yellow;

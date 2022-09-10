@@ -1335,6 +1335,7 @@ aside .sidebar li.active a span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  vertical-align: bottom;
 }
 
 .table tbody tr td a.review:hover {
