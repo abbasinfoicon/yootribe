@@ -39,6 +39,10 @@ main {
 
 .mb-135 {
     margin-bottom: 135px;
+
+    @include mq(max, 767px) {
+        margin-bottom: 35px;
+    }
 }
 
 @import "./aside";

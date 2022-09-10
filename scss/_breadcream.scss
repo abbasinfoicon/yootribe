@@ -26,6 +26,11 @@
                 font-size: inherit;
                 color: $white;
 
+                @include mq(max, 1366px) {
+                    display: flex;
+                    align-items: center;
+                }
+
                 &:hover {
                     color: $white;
                 }
@@ -57,7 +62,7 @@
 .stap {
     position: relative;
 
-    @include mq(max, 767px){
+    @include mq(max, 767px) {
         display: flex;
         width: 100%;
         justify-content: center;
