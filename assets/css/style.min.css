@@ -327,7 +327,7 @@ input[type=number] {
 }
 
 .top-head .logo a img {
-  height: 39px;
+  height: 25px;
   width: auto;
 }
 
@@ -1336,10 +1336,11 @@ aside .sidebar li.active a span {
       -ms-flex-pack: center;
           justify-content: center;
   vertical-align: bottom;
+  cursor: auto;
 }
 
 .table tbody tr td a.review:hover {
-  background-color: #ea8f0c;
+  background: #05506d;
 }
 
 .form .form-group {

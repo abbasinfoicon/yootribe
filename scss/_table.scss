@@ -154,9 +154,10 @@
                         align-items: center;
                         justify-content: center;
                         vertical-align: bottom;
+                        cursor: auto;
 
                         &:hover {
-                            background-color: $yellow;
+                            background: $main;
                         }
                     }
                 }
