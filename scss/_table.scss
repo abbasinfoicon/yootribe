@@ -67,6 +67,11 @@
                     width: 290px;
                 }
 
+                &.w130p {
+                    min-width: 130px;
+                    width: 130px;
+                }
+
                 &.no_wrap {
                     white-space: nowrap;
                 }

@@ -1239,6 +1239,11 @@ aside .sidebar li.active a span {
   width: 290px;
 }
 
+.table tbody tr td.w130p {
+  min-width: 130px;
+  width: 130px;
+}
+
 .table tbody tr td.no_wrap {
   white-space: nowrap;
 }
