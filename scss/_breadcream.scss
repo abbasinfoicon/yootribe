@@ -46,6 +46,11 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+
+    @include mq(max, 550px) {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 
 // stap

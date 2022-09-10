@@ -27,6 +27,10 @@
                 height: 25px;
                 width: auto;
 
+                @include mq(max, 767px){
+                    height: auto;
+                }
+
                 &.logo{
                     height: auto;
                 }

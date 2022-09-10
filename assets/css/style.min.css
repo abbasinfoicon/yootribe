@@ -331,6 +331,12 @@ input[type=number] {
   width: auto;
 }
 
+@media (max-width: 767px) {
+  .top-head .logo a img {
+    height: auto;
+  }
+}
+
 .top-head .logo a img.logo {
   height: auto;
 }
@@ -1015,6 +1021,18 @@ aside .sidebar li.active a span {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media (max-width: 550px) {
+  .pgn_stap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .stap {
