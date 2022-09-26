@@ -536,12 +536,19 @@ main {
 
 .rightSection {
   background-color: #fff;
-  width: calc(100% - 345px);
+  width: 100%;
 }
-@media (max-width: 1365px) {
-  .rightSection {
-    width: 100%;
-  }
+.rightSection .pl-375px {
+  padding-left: 375px;
+}
+
+.img-bottom-right {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+}
+.img-bottom-right img {
+  width: auto;
 }
 
 .body-bg {
@@ -674,6 +681,15 @@ aside .sidebar li.active a {
 aside .sidebar li.active a span {
   background-color: #fff;
   color: #05506d;
+}
+aside + .rightSection {
+  background-color: #fff;
+  width: calc(100% - 345px);
+}
+@media (max-width: 1365px) {
+  aside + .rightSection {
+    width: 100%;
+  }
 }
 
 .custom-padding {

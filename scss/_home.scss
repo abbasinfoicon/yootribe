@@ -18,10 +18,22 @@ main {
 // rightSection
 .rightSection {
     background-color: $white;
-    width: calc(100% - 345px);
+    width: 100%;
 
-    @include mq(max, 1365px) {
-        width: 100%;
+    // pl-375px
+    .pl-375px {
+        padding-left: 375px;
+    }
+}
+
+// img-bottom-right
+.img-bottom-right {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $white;
+
+    img {
+        width: auto;
     }
 }
 

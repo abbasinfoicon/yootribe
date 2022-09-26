@@ -108,5 +108,15 @@ aside {
             }
         }
     }
+
+    // rightSection
+    & + .rightSection {
+        background-color: $white;
+        width: calc(100% - 345px);
+
+        @include mq(max, 1365px) {
+            width: 100%;
+        }
+    }
 }
 //==== aside end ====//
