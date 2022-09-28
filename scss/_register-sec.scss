@@ -19,6 +19,16 @@
         margin-bottom: 50px;
         font-family: "Poppins", sans-serif;
         font-weight: 400;
+
+        @include mq(max, 767px) {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        @include mq(max, 360px) {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
     }
 
     p {
@@ -29,16 +39,29 @@
         font-family: "Poppins", sans-serif;
         font-weight: 400;
 
+        @include mq(max, 360px) {
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
         span {
             font-weight: 600;
             display: block;
             margin-bottom: 30px;
+
+            @include mq(max, 360px) {
+                margin-bottom: 15px;
+            }
         }
     }
 
     .form {
         .form-group {
             margin-bottom: 40px;
+
+            @include mq(max, 767px) {
+                margin-bottom: 15px;
+            }
 
             input,
             .custom-select {
@@ -47,6 +70,14 @@
                 font-weight: normal;
                 color: $main;
                 border: none;
+
+                @include mq(max, 767px) {
+                    font-size: 16px;
+                }
+
+                @include mq(max, 360px) {
+                    font-size: 15px;
+                }
 
                 &::placeholder {
                     color: $main;
@@ -93,6 +124,7 @@
                 .form-check-input {
                     margin-left: 8px;
                     margin-top: 4px;
+                    cursor: pointer;
                 }
 
                 label {
@@ -146,6 +178,7 @@
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         color: #989898;
+        cursor: pointer;
     }
 }
 

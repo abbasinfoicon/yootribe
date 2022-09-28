@@ -3,12 +3,25 @@
   .form-group {
     margin-bottom: 36px;
 
+    @include mq(max, 767px) {
+      margin-bottom: 20px;
+    }
+
     label {
       font-size: 20px;
       font-family: Arial, sans-serif;
       font-weight: normal;
       color: $main;
       margin-bottom: 10px;
+
+      @include mq(max, 767px) {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      @include mq(max, 360px) {
+        font-size: 15px;
+      }
 
       i {
         width: 25px;
@@ -22,10 +35,13 @@
         align-items: center;
         font-size: 14px;
         margin-right: 20px;
+
+        @include mq(max, 767px) {
+          margin-right: 10px;
+        }
       }
 
-      span {
-      }
+      span {}
     }
 
     .custom_toltip {
@@ -47,6 +63,15 @@
       border: 1px solid $border;
       padding: 6px 25px;
 
+      @include mq(max, 767px) {
+        height: 45px;
+        padding: 5px 15px;
+      }
+
+      @include mq(max, 360px) {
+        font-size: 15px;
+      }
+
       &::placeholder {
         color: $black;
       }
@@ -54,7 +79,7 @@
       &[type="file"] {
         display: none;
 
-        & + label {
+        &+label {
           border: none;
           @include border-radius(10px);
           color: $white;
@@ -71,13 +96,22 @@
           margin-bottom: 0;
           padding: 19.5px 25px;
           line-height: 1;
+
+          @include mq(max, 767px) {
+            padding: 10px 25px;
+            font-size: 16px;
+          }
+
+          @include mq(max, 360px) {
+            font-size: 15px;
+          }
         }
       }
 
       &.chkbx-toggle {
         display: none;
 
-        & + label {
+        &+label {
           position: relative;
           cursor: pointer;
           outline: none;
@@ -118,7 +152,7 @@
         }
 
         &:checked {
-          & + label {
+          &+label {
             &::before {
               background-color: $hover;
             }
@@ -130,7 +164,7 @@
         }
 
         &:disabled {
-          & + label {
+          &+label {
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
             opacity: 0.5;
             cursor: default;
@@ -140,6 +174,11 @@
 
       &.w238p {
         max-width: 238px;
+
+        @include mq(max, 767px) {
+          max-width: 100%;
+          width: 100%;
+        }
       }
     }
 
@@ -152,6 +191,10 @@
       border: 1px solid $border;
       padding: 25px;
       resize: none;
+
+      @include mq(max, 360px) {
+        font-size: 15px;
+      }
     }
 
     // custom-select
@@ -211,6 +254,14 @@
         border: 1px solid $border;
         border-right: none;
         padding: 6px 20px;
+
+        @include mq(max, 767px) {
+          font-size: 16px;
+        }
+
+        @include mq(max, 360px) {
+          font-size: 15px;
+        }
       }
     }
 
@@ -242,11 +293,9 @@
         padding: 0;
       }
 
-      input {
-      }
+      input {}
 
-      label {
-      }
+      label {}
 
       i {
         color: $red;
@@ -260,6 +309,12 @@
       position: relative;
       margin-bottom: 30px;
 
+      @include mq(max, 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -268,6 +323,10 @@
         background: $border;
         left: 50%;
         transform: translateX(-50%);
+
+        @include mq(max, 767px) {
+          content: none;
+        }
       }
 
       .second_main {
@@ -281,6 +340,10 @@
           color: $black;
           font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
           font-weight: normal;
+
+          @include mq(max, 360px) {
+            font-size: 15px;
+          }
 
           i {
             background-color: $hover;
@@ -358,6 +421,16 @@
       align-items: center;
       justify-content: center;
 
+      @include mq(max, 767px) {
+        height: auto;
+        padding: 8.76px 25px;
+        font-size: 16px;
+      }
+
+      @include mq(max, 360px) {
+        font-size: 15px;
+      }
+
       &:hover {
         background-color: $yellow;
         color: $black;
@@ -374,6 +447,11 @@
   .row_center {
     @include flex-center;
     gap: 20px;
+
+    @include mq(max, 360px) {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   .btn-second,
@@ -387,6 +465,18 @@
     background-color: $white;
     color: $btn;
     @include border-radius(10px);
+
+    @include mq(max, 767px) {
+      font-size: 16px;
+    }
+
+    @include mq(max, 360px) {
+      font-size: 15px;
+    }
+
+    @include mq(max, 360px) {
+      width: 100%;
+    }
 
     &:hover {
       color: $white;

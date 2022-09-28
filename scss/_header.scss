@@ -24,8 +24,12 @@
             display: block;
 
             img {
-                height: 39px;
+                height: 25px;
                 width: auto;
+
+                @include mq(max, 767px){
+                    height: auto;
+                }
 
                 &.logo{
                     height: auto;
@@ -37,11 +41,11 @@
     @include mq(max, 767px) {
         .row {
             .col-sm-3 {
-                width: 75px;
+                width: 124px;
             }
 
             .col-sm-9 {
-                width: calc(100% - 75px);
+                width: calc(100% - 124px);
             }
         }
     }
@@ -76,6 +80,10 @@
                     font-size: 24px;
                 }
 
+                @include mq(max, 425px) {
+                    margin: 0 10px;
+                }
+
                 &.user {
                     width: 25px;
                     height: 25px;
@@ -98,6 +106,11 @@
                         font-size: 14px;
                         color: lighten($black, 26%);
                         margin: 0;
+
+                        @include mq(max, 328px) {
+                            display: none;
+                        }
+        
 
                         &:hover {
                             color: lighten($black, 20%);

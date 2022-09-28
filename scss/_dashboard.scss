@@ -1,0 +1,78 @@
+.dashboard_sec {
+    .add-btn {
+        justify-content: flex-start;
+        margin-bottom: 90px;
+
+        @include mq(max, 991px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.boxes {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    @include mq(max, 550px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .box {
+        width: 133px;
+        min-height: 124px;
+        border: 1px solid $footer;
+        @include border-radius(4px);
+        text-align: center;
+        padding: 20px 15px 12.64px;
+        margin-bottom: 30px;
+
+        @include mq(max, 550px) {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .number {
+            font-size: 39.38px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            color: $turquoise;
+            line-height: 1;
+            margin-bottom: 10px;
+            margin-top: -5px;
+        }
+
+        p {
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            color: $main;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.packages {
+    .box {
+        .title {
+        }
+        h3 {
+        }
+        ul {
+            li {
+            }
+        }
+        a {
+        }
+    }
+}
+
+// mb-95
+.mb-95 {
+    margin-bottom: 95px;
+
+    @include mq(max, 991px) {
+        margin-bottom: 30px;
+    }
+}

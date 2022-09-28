@@ -62,6 +62,16 @@
                     width: 200px;
                 }
 
+                &.w290p {
+                    min-width: 290px;
+                    width: 290px;
+                }
+
+                &.w130p {
+                    min-width: 130px;
+                    width: 130px;
+                }
+
                 &.no_wrap {
                     white-space: nowrap;
                 }
@@ -143,9 +153,11 @@
                         display: inline-flex;
                         align-items: center;
                         justify-content: center;
+                        vertical-align: bottom;
+                        cursor: auto;
 
                         &:hover {
-                            background-color: $yellow;
+                            background: $main;
                         }
                     }
                 }
