@@ -23,6 +23,7 @@ main {
     // pl-375px
     .pl-375px {
         padding-left: 375px;
+        padding-right: 90px;
 
         @include mq(max, 1440px) {
             padding-left: 45px;

@@ -565,6 +565,7 @@ main {
 }
 .rightSection .pl-375px {
   padding-left: 375px;
+  padding-right: 90px;
 }
 @media (max-width: 1440px) {
   .rightSection .pl-375px {
@@ -2007,6 +2008,201 @@ aside + .rightSection {
   font-weight: 500;
   color: #05506d;
   text-transform: uppercase;
+}
+
+.packages {
+  display: flex;
+  gap: 45px;
+  margin-top: 62px;
+}
+@media (max-width: 1366px) {
+  .packages {
+    margin-bottom: 15px;
+    gap: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .packages {
+    flex-wrap: wrap;
+  }
+}
+.packages .box {
+  position: relative;
+  width: 274px;
+  min-height: 370px;
+  text-align: center;
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 34px 30px;
+}
+@media (max-width: 991px) {
+  .packages .box {
+    width: calc(50% - 30px);
+    padding: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .packages .box {
+    width: 100%;
+    padding: 15px;
+  }
+}
+.packages .box .title {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #38d8ec;
+  margin-bottom: 15px;
+}
+.packages .box h3,
+.packages .box h5 {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #05506d;
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+.packages .box h5 {
+  text-transform: uppercase;
+}
+.packages .box .price {
+  position: relative;
+}
+.packages .box .price h2 {
+  font-size: 70px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #05506d;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+@media (max-width: 1199px) {
+  .packages .box .price h2 {
+    font-size: 52px;
+  }
+}
+@media (max-width: 767px) {
+  .packages .box .price h2 {
+    font-size: 48px;
+  }
+}
+.packages .box .price h2 .month {
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 5px;
+}
+.packages .box .price h2 .doller {
+  font-size: 31.48px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #05506d;
+  position: absolute;
+  left: -15px;
+}
+.packages .box .price h2 a {
+  font-size: 17.62px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #05506d;
+  background-color: transparent;
+  padding: 0;
+  display: block;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  min-width: auto;
+  position: static;
+  transform: none;
+  margin-top: 40px;
+}
+.packages .box .price h2 a:hover {
+  color: #1c86ab;
+  background-color: transparent;
+}
+.packages .box ul {
+  text-align: left;
+  margin-bottom: 45px;
+}
+.packages .box ul li {
+  margin-bottom: 6px;
+  padding-left: 25px;
+}
+.packages .box ul li:before {
+  display: inline-block;
+  transform: rotate(45deg);
+  background-color: transparent;
+  top: 0;
+  width: 10px;
+  height: 15px;
+  border-bottom: 3px solid #38d8ec;
+  border-right: 3px solid #38d8ec;
+}
+.packages .box a {
+  font-size: 17.62px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ea8f0c;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  min-width: 165px;
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .packages .box a {
+    position: static;
+    transform: none;
+    left: auot;
+    bottom: auto;
+  }
+}
+.packages .box a:hover {
+  background-color: #05506d;
+  color: #fff;
+}
+.packages .box.active {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-width: 8px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #05506d, #38d8ec);
+  padding: 27px 30px;
+}
+.packages .box.active a {
+  bottom: 27px;
+}
+@media (max-width: 991px) {
+  .packages .box.active {
+    padding: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .packages .box.active {
+    padding: 15px;
+  }
+}
+.packages.min_height .box {
+  min-height: 534px;
 }
 
 .mb-95 {
